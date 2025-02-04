@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Church Website</title>
+  <title>Family of Christ Lutheran Church</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/Logo no text.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,7 +44,16 @@
           <ul class="menu-mobile">
             <li class="menu-item"><a href="about.html">About Us</a></li>
             <li class="menu-item"><a href="sermons.html">Watch</a></li>
-            <li class="menu-item"><a href="events.html">Grow &amp; Serve</a></li>
+            <li class="menu-item dropdown">
+              <a>Grow &amp; Serve</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="youth.html">Youth</a></li>
+                <li class="submenu-item"><a href="baptisms.html">Baptisms, Weddings &amp; Funerals</a></li>
+                <li class="submenu-item"><a href="volunteer.html">Volunteer Opportunities</a></li>
+                <li class="submenu-item"><a href="missions.html">Missions</a></li>
+                <li class="submenu-item"><a href="events.html">Events</a></li>
+              </ul>
+            </li>            
             <li class="menu-item"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -58,6 +69,14 @@
       <div class="floating-shape shape-square"></div>
       <div class="floating-shape shape-triangle"></div>
     </div>
+
+  <!-- Vegetation Container -->
+  <div class="hero-vegetation">
+    <img class="veg veg1" src="assets/images/Colorful-Natural-Tree.svg" alt="Colorful Natural Tree">
+    <img class="veg veg2" src="assets/images/vegetation 1.svg" alt="Vegetation 1">
+    <img class="veg veg3" src="assets/images/vegetation 2.svg" alt="Vegetation 2">
+  </div>
+
     <!-- Carousel -->
   <div class="hero-carousel">
     <div class="carousel-slide active">
@@ -85,6 +104,7 @@
       <img src="assets/images/event 3.jpg" alt="Event 3">
     </div>
   </div>
+ 
   <div class="hero-text">
     <h1>A Church For All, A Family In Christ.</h1>
     <a class="cta-button" href="https://www.youtube.com/channel/UCJ1zPEgMTiJIaQkQYC8X1IA">Live Sermons</a>
@@ -94,17 +114,22 @@
 <!-- Mission Section -->
 <section class="mission-section">
   <div class="mission-container">
+    <h2 class="mission-heading">YOU BELONG</h2>
     <p class="mission-blurb">
       At Family of Christ Lutheran Church, we believe faith is more than just words—it’s a way of life. Our mission is to grow in Christ, serve our community, and walk together in faith. Whether you’re new to church or looking for a place to deepen your relationship with God, you are always welcome here.
     </p>
-    <a class="cta-button" href="">Why We're Here</a>
+    <a class="mission-btn" href="">Why We're Here</a>
   </div>
 </section>
+
 
 
   <main>
     <!-- Main content goes here -->
   </main>
-  <script src="js/script.js"></script>
+  <script src="js/script.js"></script> <!-- Your JS file must be AFTER GSAP -->
+
+
+
 </body>
 </html>
