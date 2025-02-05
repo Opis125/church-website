@@ -508,11 +508,390 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
   }
   
-  
-  
-  
-  
-  
+/* CTA Cards Section */
+.cta-cards {
+  padding: 80px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.cta-cards .container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap;  /* Prevent wrapping so all cards remain on one row */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card styling with fixed width for three cards in one row */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 346px;   /* Fixed width so three cards (~346px each + gaps) fit in 1100px */
+  overflow: hidden;
+}
+
+/* Updated Image Styling: increased height */
+.card img {
+  width: 100%;
+  height: 220px;       /* Increased from 180px to 220px */
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Larger, bolder text for the card title */
+.card h3 {
+  color: #333;
+  font-size: 24px;     /* Increased from 22px */
+  margin: 15px 0;
+}
+
+/* Slightly larger text for the paragraph */
+.card p {
+  color: #555;
+  font-size: 18px;     /* Increased from 16px */
+  line-height: 1.5;
+}
+
+/* Larger button text */
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 18px;     /* Increased from 16px */
+  text-decoration: none;
+  color: #fff;
+  background: #007bff;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.card a:hover {
+  background: #0056b3;
+}
+
+/* Hover Effect: Raises the Card Slightly */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Newsletter Subscription Section */
+.newsletter {
+  background: #f2f2f2; /* Light background color (or adjust as desired) */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.newsletter-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #BD7600, #0F1B21);
+  background-size: 100% 100%;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+
+.newsletter-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.newsletter-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Form styling */
+.newsletter-form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+  border-color: #D0A764;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #D0A764;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #BD7600;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #f2f2f2; /* Ensures full-width background */
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%; /* Makes the section span the full screen */
+}
+
+.faq-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px; /* Adds spacing between the header and first question */
+}
+
+.faq-container {
+  max-width: 700px; /* Limits the width of the FAQ section */
+  margin: 0 auto; /* Keeps it centered */
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Spacing between FAQ items */
+}
+
+.faq-item {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto; /* Centers each FAQ item */
+  width: 90%; /* Ensures the FAQ boxes don’t take up the full screen */
+  max-width: 600px; /* Sets a max width so they don’t get too large */
+}
+
+
+
+/* Hover Effect */
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Text */
+.faq-question {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Answer (Initially Hidden) */
+.faq-answer {
+  font-size: 16px;
+  color: #555;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Expanded State */
+.faq-item.active .faq-answer {
+  max-height: 100px; /* Adjust based on content */
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* Footer Section */
+.footer {
+  background: #0e6169;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+  text-align: left;
+}
+
+.footer-brand {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-brand img {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Footer Navigation */
+.footer-links {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px; /* Increased spacing between links */
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: normal;
+  position: relative; /* Required for underline effect */
+  transition: color 0.3s ease;
+}
+
+/* Underline Effect on Hover */
+.footer-links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Matches navbar underline positioning */
+  width: 100%;
+  height: 2px;
+  background-color: #D0A764; /* Same gold color as navbar */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #D0A764; /* Changes text color to gold on hover */
+}
+
+.footer-links ul li a:hover::after {
+  transform: scaleX(1); /* Expands the underline */
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 6px;
+}
+
+.footer-nav ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Bold Main Links */
+.footer-nav ul li strong a {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Sub-links styling */
+.sub-links {
+  padding-left: 15px;
+}
+
+.sub-links li {
+  font-size: 14px;
+}
+
+/* Contact Info */
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #f39c12;
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer-logo {
+  width: 60px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
   
   /* ----------------------
      Mobile Navigation
